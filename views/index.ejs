@@ -1,0 +1,28 @@
+<%- include('header') -%>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Email</th>
+            </tr>
+        </thead>
+        <tbody >
+            
+           <% userField.forEach(field =>  { %>
+                <tr>
+                    <th scope="row"><%= i %></th>
+                    <td><%= field.lname %></td>
+                    <td><%= field.fname %></td>
+                    <td><%= field.email %></td>
+                    <% i++ %>
+                </tr>
+                
+            <% }); %>
+            
+        </tbody>
+    </table>
+</body>
+</html>
